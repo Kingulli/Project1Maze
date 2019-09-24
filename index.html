@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sculpting Realities–House</title>
+    <meta name="description" content="Sculpting Realities day 1 Demo">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script> 
+    <script>
+      
+    </script>
+  </head>
+   <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+  <body>
+   
+    <a-assets>
+     <img id="escher" src="https://cdn.glitch.com/bbf0ec2e-d7aa-4ec9-a3cd-4589e1f6040e%2Fscarabs.jpg?v=1568746197581">
+          <video id="art mirror" src="https://cdn.glitch.com/bbf0ec2e-d7aa-4ec9-a3cd-4589e1f6040e%2FComp%201_1.mp4?v=1568754059800" autoplay loop="true" sound="autoplay: true"></video>
+        <video id="wall" src="https://cdn.glitch.com/600b1c0d-69b3-47d0-87f7-85df8cdaf06a%2Flive%20wall.mp4?v=1569346886260" autoplay loop="true" sound="autoplay: true"></video>
+  </a-assets>
+    
+        <a-asset-item id="rhino" src="https://cdn.glitch.com/600b1c0d-69b3-47d0-87f7-85df8cdaf06a%2FMaze2.obj?v=1569345657054"> </a-asset-item>
+
+    <a-scene >
+       <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script> 
+       <a-entity environment="preset: tron; skyColor:blue; horizonColor:#6eac66 groundColor: #dde7dc; groundColor2:black; groundTexture:walkernoise; grid:none"></a-entity>
+      
+<a-obj-model material="src:#wall" src="#rhino" side="double" scale="6 6 6" position="3 0 -9.6"> </a-obj-model>
+      
+      <a-sphere mirror radius="4" position="0 10 -10" material="src:#art mirror" side="double"></a-sphere>
+      
+
+
+        <a-sphere mirror radius="12" position="0 10 -10" material="src:#art mirror" opacity=".6" side="double"></a-sphere>
+ <a-sphere radius="11" position="0 10 -10" material="src:#art mirror" opacity=".6" side="double"></a-sphere>
+      
+        <a-box height="5" width="5" depth="5" position="0 2 -10" rotation="0 0 0" material="src:#art mirror"></a-box>
+      
+<!--       <a-sphere  mirror radius="30" color="green" position="0 1 -60" rotation="0 0 0" side="double" resolution="128" animation="property:position; to: -1 70 -10; dur:5000; easing:linear;  loop:true startEvents:mouseenter"> </a-sphere>
+      <a-sphere mirror animation="property:position; to: -1 5 -3; dur:5000; easing:linear;  loop:true startEvents:mouseenter" position="-1 3 -5"></a-sphere> -->
+                
+ <a-camera position="0 10 0"> <a-cursor></a-cursor> </a-camera>
+    
+    </a-scene>
+  </body>
+</html>
